@@ -1,0 +1,134 @@
+.contact-page {
+  padding-top: 6rem;
+  
+  .contact-hero {
+    text-align: center;
+    padding-bottom: 3rem;
+    
+    .page-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .page-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+  
+  .contact-content {
+    padding: 3rem 0 6rem;
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+      
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .contact-info {
+      .contact-info-content {
+        padding: 2.5rem;
+        height: 100%;
+        
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+          color: var(--text-primary);
+        }
+        
+        > p {
+          color: var(--text-secondary);
+          margin-bottom: 2rem;
+        }
+        
+        .contact-details {
+          margin-bottom: 2.5rem;
+          
+          .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            
+            .contact-icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background-color: rgba(99, 102, 241, 0.1);
+              color: var(--accent-primary);
+              font-size: 1.2rem;
+              margin-right: 1rem;
+              flex-shrink: 0;
+            }
+            
+            .contact-text {
+              h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.3rem;
+                color: var(--text-primary);
+              }
+              
+              p {
+                color: var(--text-secondary);
+              }
+            }
+          }
+        }
+        
+        .social-links {
+          h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+          }
+          
+          .social-icons {
+            display: flex;
+            gap: 1rem;
+            
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: rgba(99, 102, 241, 0.1);
+              color: var(--accent-primary);
+              font-size: 1.2rem;
+              transition: all 0.3s ease;
+              
+              &:hover {
+                background-color: var(--accent-primary);
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .map-section {
+    padding-bottom: 6rem;
+    
+    .map-container {
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      
+      iframe {
+        display: block;
+      }
+    }
+  }
+}
+

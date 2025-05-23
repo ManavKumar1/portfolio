@@ -1,0 +1,75 @@
+.projects-page {
+  padding-top: 6rem;
+  
+  .projects-hero {
+    text-align: center;
+    padding-bottom: 3rem;
+    
+    .page-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .page-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+    
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      
+      .filter-tab {
+        position: relative;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        background-color: transparent;
+        border: none;
+        color: var(--text-secondary);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          color: var(--accent-primary);
+        }
+        
+        &.active {
+          color: white;
+          background-color: var(--accent-primary);
+        }
+        
+        .tab-indicator {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          background-color: var(--accent-primary);
+          border-radius: 50px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+  
+  .projects-grid-section {
+    padding: 3rem 0 6rem;
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2.5rem;
+      
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,15 @@
+Email From Portfolio
+
+Hello Manav,
+
+You got a new message from {{name}}:
+
+{{subject}}
+
+{{message}}
+
+{{email}}
+
+Best wishes.
+
+EmailJS team
