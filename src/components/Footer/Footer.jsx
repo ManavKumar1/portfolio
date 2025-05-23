@@ -17,11 +17,11 @@ const Footer = () => {
       url: "https://linkedin.com/in/manav-kumar-0",
       label: "LinkedIn",
     },
-    {
-      icon: <FiTwitter />,
-      url: "https://twitter.com/yourusername",
-      label: "Twitter",
-    },
+    // {
+    //   icon: <FiTwitter />,
+    //   url: "https://twitter.com/yourusername",
+    //   label: "Twitter",
+    // },
     { icon: <FiMail />, url: "mailto:reachformanav@gmail.com", label: "Email" },
   ];
 
