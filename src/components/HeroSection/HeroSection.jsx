@@ -6,7 +6,7 @@ import "./HeroSection.scss";
 import heroimg from "../../assets/img1.jpg";
 import react from "../../assets/react.svg";
 import express from "../../assets/Express.svg";
-import mongodb from "../../assets/Mongodb.svg";
+import mongodb from "../../assets/MongoDB.svg";
 import redux from "../../assets/Redux.svg";
 import aws from "../../assets/AWS.svg";
 import nextjs from "../../assets/Next.js.svg";
