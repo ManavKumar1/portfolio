@@ -33,18 +33,12 @@ const About = () => {
 
   const education = [
     {
-      institution: "University of Rajasthan",
-      degree: "Bachelor of Technology in Computer Science",
+      institution: "Poornima Institute of Engineering & Technology",
+      degree:
+        "Bachelor of Technology in Computer Science specialization in Ai & Ds",
       period: "2020 - 2024",
       description:
         "Focused on software engineering, data structures, algorithms, and web development. Graduated with honors.",
-    },
-    {
-      institution: "Coding Bootcamp",
-      degree: "Full Stack Web Development",
-      period: "2022",
-      description:
-        "Intensive 12-week program covering modern web development technologies and best practices.",
     },
   ];
 

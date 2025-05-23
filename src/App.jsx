@@ -10,6 +10,7 @@ import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
+import ScrollToTop from './utils/ScrollToTop'
 import "./App.scss";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
   return (
     <Router>
       <div className='app'>
+        <ScrollToTop />
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <main className='main-content'>
           <AnimatePresence mode='wait'>

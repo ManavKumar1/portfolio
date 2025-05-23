@@ -132,7 +132,7 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
           >
             <iframe
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1648642705274!5m2!1sen!2sin'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112065.8376557341!2d76.96108602665392!3d28.4594964911754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1880bbd184e5%3A0x2bfcf24c0b5f7c34!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1716454347236!5m2!1sen!2sin'
               width='100%'
               height='450'
               style={{ border: 0 }}
