@@ -6,7 +6,7 @@ import "./TechOrbit.scss";
 // Import all tech icons
 import reactIcon from "../../assets/react.svg";
 import javascriptIcon from "../../assets/JavaScript.svg";
-import typescriptIcon from "../../assets/Typescript.svg";
+import typescriptIcon from "../../assets/TypeScript.svg";
 import nodeIcon from "../../assets/Node.js.svg";
 import expressIcon from "../../assets/Express.svg";
 import mongodbIcon from "../../assets/MongoDB.svg";
