@@ -12,17 +12,17 @@ import aws from "../../assets/AWS.svg";
 import nextjs from "../../assets/Next.js.svg";
 import scss from "../../assets/Sass.svg";
 import nodejs from "../../assets/Node.js.svg";
-import javascript from "../../assets/Javascript.svg";
-import typescript from "../../assets/Typescript.svg";
+import javascript from "../../assets/JavaScript.svg";
+import typescript from "../../assets/TypeScript.svg";
 import python from "../../assets/Python.svg";
 import cpp from "../../assets/Cpp.svg";
 import php from "../../assets/PHP.svg";
 import html from "../../assets/HTML5.svg";
 import css from "../../assets/CSS3.svg";
-import git from "../../assets/Github.svg";
-import mysql from "../../assets/Mysql.svg";
+import git from "../../assets/GitHub.svg";
+import mysql from "../../assets/MySQL.svg";
 import tailwind from "../../assets/Tailwind.svg";
-import graphql from "../../assets/Graphql.svg";
+import graphql from "../../assets/GraphQL.svg";
 import resume from "../../assets/Manav_Kumar_eResume.pdf";
 const techItems = [
   { icon: react, label: "React.js" },
