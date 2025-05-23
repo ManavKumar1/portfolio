@@ -50,7 +50,7 @@ const Home = () => {
       description:
         "A high-performance e-commerce platform with product catalog, shopping cart, user authentication, and payment integration handling 10,000+ daily users.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Node.js", "AWS", "Stripe"],
+      tags: ["React.js", "Node.js", "AWS", "Razorpay"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     },

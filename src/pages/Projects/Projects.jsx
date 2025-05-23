@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import ProjectCard from "../../components/ProjectCard/ProjectCard"
-import "./Projects.scss"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import "./Projects.scss";
 
 const Projects = () => {
-  const [filter, setFilter] = useState("all")
+  const [filter, setFilter] = useState("all");
 
   const projects = [
     {
@@ -34,7 +34,7 @@ const Projects = () => {
       description:
         "A fully responsive e-commerce platform with product catalog, shopping cart, user authentication, and payment integration.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Node.js", "AWS", "Stripe"],
+      tags: ["React.js", "Node.js", "AWS", "Razorpay"],
       category: "fullstack",
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
@@ -69,23 +69,26 @@ const Projects = () => {
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
     },
-  ]
+  ];
 
-  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   const categories = [
     { id: "all", label: "All Projects" },
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
     { id: "fullstack", label: "Full Stack" },
-  ]
+  ];
 
   return (
-    <div className="projects-page">
-      <section className="projects-hero">
-        <div className="container">
+    <div className='projects-page'>
+      <section className='projects-hero'>
+        <div className='container'>
           <motion.h1
-            className="page-title"
+            className='page-title'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -93,16 +96,17 @@ const Projects = () => {
             My Projects
           </motion.h1>
           <motion.p
-            className="page-subtitle"
+            className='page-subtitle'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            A collection of my recent work, showcasing my skills and expertise in web development.
+            A collection of my recent work, showcasing my skills and expertise
+            in web development.
           </motion.p>
 
           <motion.div
-            className="filter-tabs"
+            className='filter-tabs'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -110,14 +114,16 @@ const Projects = () => {
             {categories.map((category) => (
               <button
                 key={category.id}
-                className={`filter-tab ${filter === category.id ? "active" : ""}`}
+                className={`filter-tab ${
+                  filter === category.id ? "active" : ""
+                }`}
                 onClick={() => setFilter(category.id)}
               >
                 {category.label}
                 {filter === category.id && (
                   <motion.div
-                    className="tab-indicator"
-                    layoutId="tab-indicator"
+                    className='tab-indicator'
+                    layoutId='tab-indicator'
                     transition={{ type: "spring", duration: 0.5 }}
                   />
                 )}
@@ -127,9 +133,9 @@ const Projects = () => {
         </div>
       </section>
 
-      <section className="projects-grid-section">
-        <div className="container">
-          <motion.div className="projects-grid" layout>
+      <section className='projects-grid-section'>
+        <div className='container'>
+          <motion.div className='projects-grid' layout>
             <AnimatePresence>
               {filteredProjects.map((project, index) => (
                 <motion.div
@@ -148,8 +154,7 @@ const Projects = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
-
+export default Projects;

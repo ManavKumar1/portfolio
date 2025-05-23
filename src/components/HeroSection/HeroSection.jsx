@@ -114,19 +114,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p>Technical Expertise</p>
-          <div className='tech-marquee'>
-            <div className='marquee-track'>
-              {[...techItems, ...techItems].map((tech, idx) => (
-                <div className='tech-icon' key={idx}>
-                  <img
-                    src={tech.icon || "/placeholder.svg"}
-                    alt={`${tech.label} Logo`}
-                  />
-                  <span>{tech.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <TechMarquee items={techItems} />
         </motion.div>
       </div>
     </section>
@@ -134,3 +122,21 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+const TechMarquee = ({ items }) => {
+  return (
+    <div className='tech-marquee'>
+      <div className='marquee-track'>
+        {[...items, ...items].map((tech, idx) => (
+          <div className='tech-icon' key={idx}>
+            <img
+              src={tech.icon || "/placeholder.svg"}
+              alt={`${tech.label} Logo`}
+            />
+            <span>{tech.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};

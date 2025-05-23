@@ -10,6 +10,8 @@ import {
 } from "react-icons/fi";
 import "./Services.scss";
 
+import TechOrbit from "../../components/TechOrbit/TechOrbit";
+
 const Services = () => {
   const services = [
     {
@@ -248,6 +250,22 @@ const Services = () => {
             </motion.div>
           </div>
         </div>
+      </section>
+      <section className='tech-orbit-section'>
+        <motion.div
+          className='section-title-wrapper'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className='section-title'>Technical Proficiency</h2>
+          <p className='section-subtitle'>
+            Hover over the technologies to learn more about my experience with
+            each one
+          </p>
+        </motion.div>
+        <TechOrbit />
       </section>
 
       <section className='cta-section'>
