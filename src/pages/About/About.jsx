@@ -10,7 +10,7 @@ const About = () => {
   const experiences = [
     {
       company: "Freecharge",
-      position: "Software Development Engineer",
+      position: "Fullstack Software Development Engineer",
       period: "2024 - Present",
       description:
         "Developing and maintaining HR management systems and internal operational panels. Building full-stack applications using React.js, Express.js, and MongoDB. Improved system performance by 40% through code optimization and database indexing.",
@@ -18,14 +18,14 @@ const About = () => {
     {
       company: "Compitcom",
       position: "Software Engineer",
-      period: "2024",
+      period: "2024 - 2024",
       description:
         "Developed responsive web applications with React.js and implemented RESTful APIs. Collaborated with cross-functional teams to deliver projects on time and within scope. Reduced page load time by 30% through performance optimization techniques.",
     },
     {
-      company: "Self-employed",
-      position: "Junior Developer",
-      period: "2018 - 2024",
+      company: "Freelancer",
+      position: "Full Stack Developer",
+      period: "2020 - 2024",
       description:
         "Worked on various web development projects while completing my education. Gained hands-on experience with React.js, Node.js, and AWS. Developed strong problem-solving skills and ability to work independently.",
     },
@@ -132,7 +132,7 @@ const About = () => {
                   >
                     <FiGithub />
                   </motion.a>
-                  <motion.a
+                  {/* <motion.a
                     href='https://twitter.com/yourusername'
                     target='_blank'
                     rel='noopener noreferrer'
@@ -141,7 +141,7 @@ const About = () => {
                     aria-label='Twitter Profile'
                   >
                     <FiTwitter />
-                  </motion.a>
+                  </motion.a> */}
                 </div>
               </div>
             </motion.div>
