@@ -67,6 +67,12 @@
         margin-bottom: 1.5rem;
         color: var(--text-primary);
       }
+      @media (max-width: 576px) {
+        h2 {
+          font-size: 1.7rem;
+       
+        }
+      }
       
       p {
         font-size: 1.2rem;
