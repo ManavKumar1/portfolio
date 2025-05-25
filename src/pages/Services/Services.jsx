@@ -146,6 +146,23 @@ const Services = () => {
         </div>
       </section>
 
+      <section className='tech-orbit-section'>
+        <motion.div
+          className='section-title-wrapper'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className='section-title'>Technical Proficiency</h2>
+          <p className='section-subtitle'>
+            Hover over the technologies to learn more about my experience with
+            each one
+          </p>
+        </motion.div>
+        <TechOrbit />
+      </section>
+
       <section className='process-section'>
         <div className='container'>
           <motion.h2
@@ -251,23 +268,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className='tech-orbit-section'>
-        <motion.div
-          className='section-title-wrapper'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className='section-title'>Technical Proficiency</h2>
-          <p className='section-subtitle'>
-            Hover over the technologies to learn more about my experience with
-            each one
-          </p>
-        </motion.div>
-        <TechOrbit />
-      </section>
-
       <section className='cta-section'>
         <div className='container'>
           <motion.div

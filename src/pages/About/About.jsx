@@ -9,8 +9,8 @@ import resume from "../../assets/Manav_Kumar_eResume.pdf";
 const About = () => {
   const experiences = [
     {
-      company: "Freecharge",
-      position: "Fullstack Software Development Engineer",
+      company: `Freecharge Payment Technologies by Axis Bank`,
+      position: "Fullstack Software Development",
       period: "2024 - Present",
       description:
         "Developing and maintaining HR management systems and internal operational panels. Building full-stack applications using React.js, Express.js, and MongoDB. Improved system performance by 40% through code optimization and database indexing.",
@@ -39,6 +39,13 @@ const About = () => {
       period: "2020 - 2024",
       description:
         "Focused on software engineering, data structures, algorithms, and web development. Graduated with honors.",
+    },
+    {
+      institution: "Hindustan International Academy",
+      degree: "High School",
+      period: "Before - 2020",
+      description:
+        "Completed foundational education with a strong emphasis on science and mathematics. Actively participated in academic and extracurricular activities, graduating with honors.",
     },
   ];
 
