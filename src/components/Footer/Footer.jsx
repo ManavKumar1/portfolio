@@ -1,30 +1,26 @@
 "use client";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
 import "./Footer.scss";
+import { socialLinks } from "../../data/AboutData";
+import { FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    {
-      icon: <FiGithub />,
-      url: "https://github.com/manavkumar1",
-      label: "GitHub",
-    },
-    {
-      icon: <FiLinkedin />,
-      url: "https://linkedin.com/in/manav-kumar-0",
-      label: "LinkedIn",
-    },
-    // {
-    //   icon: <FiTwitter />,
-    //   url: "https://twitter.com/yourusername",
-    //   label: "Twitter",
-    // },
-    { icon: <FiMail />, url: "mailto:reachformanav@gmail.com", label: "Email" },
-  ];
-
+  const getIcon = (iconName) => {
+    switch (iconName) {
+      case "github":
+        return <FiGithub />;
+      case "linkedin":
+        return <FiLinkedin />;
+      case "mail":
+        return <FiMail />;
+      // Uncomment below if Twitter is needed
+      // case "twitter":
+      //   return <FiTwitter />;
+      default:
+        return null;
+    }
+  };
   return (
     <footer className='footer'>
       <div className='footer-container'>
@@ -77,7 +73,8 @@ const Footer = () => {
         </div>
 
         <div className='footer-bottom'>
-          <p>&copy; {currentYear} Manav. All rights reserved.</p>
+          <p>Made with ❤️</p>
+          <p> &copy; {currentYear} Manav. All rights reserved.</p>
 
           <div className='social-links'>
             {socialLinks.map((link, index) => (
@@ -90,7 +87,7 @@ const Footer = () => {
                 whileHover={{ y: -5, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {link.icon}
+                {getIcon(link.icon)}
               </motion.a>
             ))}
           </div>

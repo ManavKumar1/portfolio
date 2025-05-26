@@ -4,72 +4,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./Projects.scss";
-
+import projects from "../../data/Projects"; 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
-
-  const projects = [
-    {
-      title: "Hostel-Finding Platform",
-      description:
-        "A full-stack application that helps students find and book hostels near their universities. Features include search filters, booking management, and review system.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Node.js", "MongoDB", "Express.js"],
-      category: "fullstack",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "HR Management System",
-      description:
-        "An internal operational tool built for Freecharge that streamlines HR processes including employee onboarding, performance reviews, and leave management.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Redux", "Express.js", "MongoDB"],
-      category: "fullstack",
-      liveUrl: "",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "E-commerce Website",
-      description:
-        "A fully responsive e-commerce platform with product catalog, shopping cart, user authentication, and payment integration.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Node.js", "AWS", "Razorpay"],
-      category: "fullstack",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "A modern portfolio website for a graphic designer showcasing their work with a beautiful gallery and contact form.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "SCSS", "Framer Motion"],
-      category: "frontend",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Task Management API",
-      description:
-        "A RESTful API for task management with user authentication, task CRUD operations, and team collaboration features.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["Node.js", "Express.js", "MongoDB", "JWT"],
-      category: "backend",
-      liveUrl: "",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Weather App",
-      description:
-        "A weather application that provides current weather conditions and forecasts for any location using a third-party weather API.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "API Integration", "CSS3"],
-      category: "frontend",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-  ];
 
   const filteredProjects =
     filter === "all"
@@ -137,7 +74,7 @@ const Projects = () => {
         <div className='container'>
           <motion.div className='projects-grid' layout>
             <AnimatePresence>
-              {filteredProjects.map((project, index) => (
+              {filteredProjects.map((project) => (
                 <motion.div
                   key={project.title}
                   layout

@@ -1,54 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiDownload, FiLinkedin, FiGithub, FiTwitter } from "react-icons/fi";
+import { FiDownload, FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 import "./About.scss";
 import aboutimg from "../../assets/img2.jpg";
-import resume from "../../assets/Manav_Kumar_eResume.pdf";
+import {
+  experiences,
+  education,
+  socialLinks,
+  resume,
+} from "../../data/AboutData";
 
 const About = () => {
-  const experiences = [
-    {
-      company: `Freecharge Payment Technologies by Axis Bank`,
-      position: "Fullstack Software Development",
-      period: "2024 - Present",
-      description:
-        "Developing and maintaining HR management systems and internal operational panels. Building full-stack applications using React.js, Express.js, and MongoDB. Improved system performance by 40% through code optimization and database indexing.",
-    },
-    {
-      company: "Compitcom",
-      position: "Software Engineer",
-      period: "2024 - 2024",
-      description:
-        "Developed responsive web applications with React.js and implemented RESTful APIs. Collaborated with cross-functional teams to deliver projects on time and within scope. Reduced page load time by 30% through performance optimization techniques.",
-    },
-    {
-      company: "Freelancer",
-      position: "Full Stack Developer",
-      period: "2020 - 2024",
-      description:
-        "Worked on various web development projects while completing my education. Gained hands-on experience with React.js, Node.js, and AWS. Developed strong problem-solving skills and ability to work independently.",
-    },
-  ];
-
-  const education = [
-    {
-      institution: "Poornima Institute of Engineering & Technology",
-      degree:
-        "Bachelor of Technology in Computer Science specialization in Ai & Ds",
-      period: "2020 - 2024",
-      description:
-        "Focused on software engineering, data structures, algorithms, and web development. Graduated with honors.",
-    },
-    {
-      institution: "Hindustan International Academy",
-      degree: "High School",
-      period: "Before - 2020",
-      description:
-        "Completed foundational education with a strong emphasis on science and mathematics. Actively participated in academic and extracurricular activities, graduating with honors.",
-    },
-  ];
-
+  const getIcon = (iconName) => {
+    switch (iconName) {
+      case "github":
+        return <FiGithub />;
+      case "linkedin":
+        return <FiLinkedin />;
+      case "mail":
+        return <FiMail />;
+      // Uncomment below if Twitter is needed
+      // case "twitter":
+      //   return <FiTwitter />;
+      default:
+        return null;
+    }
+  };
   return (
     <div className='about-page'>
       <section className='about-hero'>
@@ -119,36 +97,19 @@ const About = () => {
                 </motion.a>
 
                 <div className='social-links'>
-                  <motion.a
-                    href='https://linkedin.com/in/manav-kumar-0'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    whileHover={{ y: -5 }}
-                    whileTap={{ scale: 0.9 }}
-                    aria-label='LinkedIn Profile'
-                  >
-                    <FiLinkedin />
-                  </motion.a>
-                  <motion.a
-                    href='https://github.com/manavkumar1'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    whileHover={{ y: -5 }}
-                    whileTap={{ scale: 0.9 }}
-                    aria-label='GitHub Profile'
-                  >
-                    <FiGithub />
-                  </motion.a>
-                  {/* <motion.a
-                    href='https://twitter.com/yourusername'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    whileHover={{ y: -5 }}
-                    whileTap={{ scale: 0.9 }}
-                    aria-label='Twitter Profile'
-                  >
-                    <FiTwitter />
-                  </motion.a> */}
+                  {socialLinks.map((link, index) => (
+                    <motion.a
+                      key={index}
+                      href={link.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      whileHover={{ y: -5 }}
+                      whileTap={{ scale: 0.9 }}
+                      aria-label={link.label}
+                    >
+                      {getIcon(link.icon)}
+                    </motion.a>
+                  ))}
                 </div>
               </div>
             </motion.div>

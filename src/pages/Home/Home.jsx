@@ -6,7 +6,7 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 import SkillCard from "../../components/SkillCard/SkillCard";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./Home.scss";
-
+import projects from "../../data/Projects"; 
 const Home = () => {
   const skills = [
     {
@@ -35,35 +35,7 @@ const Home = () => {
     },
   ];
 
-  const featuredProjects = [
-    {
-      title: "HR Management System",
-      description:
-        "An internal operational tool built for Freecharge that streamlines HR processes including employee onboarding, performance reviews, and leave management.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Redux", "Express.js", "MongoDB"],
-      liveUrl: "",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "E-commerce Platform",
-      description:
-        "A high-performance e-commerce platform with product catalog, shopping cart, user authentication, and payment integration handling 10,000+ daily users.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Node.js", "AWS", "Razorpay"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Student Housing Portal",
-      description:
-        "A full-stack application that helps students find and book hostels near their universities with search filters, booking management, and review system.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["React.js", "Node.js", "MongoDB", "Express.js"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
-  ];
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <div className='home-page'>

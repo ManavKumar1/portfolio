@@ -16,7 +16,8 @@ const ProjectCard = ({ project }) => {
       transition={{ duration: 0.5 }}
     >
       <div className='project-image'>
-        <img src={CardPhoto || "/placeholder.svg"} alt={title} />
+        <img src={image || CardPhoto} alt={title} />
+
         <div className='project-links'>
           {liveUrl && (
             <motion.a
