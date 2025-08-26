@@ -23,7 +23,12 @@ import git from "../../assets/GitHub.svg";
 import mysql from "../../assets/MySQL.svg";
 import tailwind from "../../assets/Tailwind.svg";
 import graphql from "../../assets/GraphQL.svg";
-import resume from "../../assets/Manav_Kumar_eResume.pdf";
+
+import selenium from "../../assets/Selenium.svg";
+import maven from "../../assets/Apache Maven.svg";
+import java from "../../assets/Java.svg";
+import jenkins from "../../assets/Jenkins.svg";
+import resume from "../../assets/Manav_Kumar_RESUME.pdf";
 const techItems = [
   { icon: react, label: "React.js" },
   { icon: express, label: "Express.js" },
@@ -45,6 +50,11 @@ const techItems = [
   { icon: mysql, label: "MySQL" },
   { icon: tailwind, label: "Tailwind CSS" },
   { icon: graphql, label: "GraphQL" },
+
+  { icon: selenium, label: "Selenium" },
+  { icon: jenkins, label: "Jenkins" },
+  { icon: maven, label: "Maven" },
+  { icon: java, label: "Java" },
 ];
 
 const HeroSection = () => {

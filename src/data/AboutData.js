@@ -48,7 +48,7 @@ const socialLinks = [
   },
   {
     icon: "linkedin", // Change icon to string
-    url: "https://linkedin.com/in/manav-kumar-0",
+    url: "https://linkedin.com/in/imanavk",
     label: "LinkedIn",
   },
   {
@@ -63,7 +63,7 @@ const socialLinks = [
   // }
 ];
 
-const resume = "../../assets/Manav_Kumar_eResume.pdf";
+const resume = "../../assets/Manav_Kumar_RESUME.pdf";
 const aboutimg = "../../assets/img2.jpg";
 
 export { experiences, education, socialLinks, resume, aboutimg };

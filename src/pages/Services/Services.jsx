@@ -7,6 +7,7 @@ import {
   FiServer,
   FiDatabase,
   FiCloud,
+  FiCheckCircle,
 } from "react-icons/fi";
 import "./Services.scss";
 
@@ -27,6 +28,22 @@ const Services = () => {
         "Cross-browser compatibility",
       ],
     },
+    {
+      icon: <FiCheckCircle />,
+      title: "Automation Testing & QA",
+      description:
+        "Ensuring software quality through robust automated testing strategies using Java, Selenium, REST Assured, and more.",
+      features: [
+        "UI Testing with Selenium",
+        "API Testing with Postman & REST Assured",
+        "Test Automation (Java, TestNG, JUnit)",
+        "Bug Tracking with JIRA",
+        "Agile/Scrum QA",
+        "Regression & Smoke Testing",
+        "Cross-browser Validation",
+      ],
+    },
+
     {
       icon: <FiSmartphone />,
       title: "Mobile App Development",
@@ -53,6 +70,7 @@ const Services = () => {
         "Security implementation",
       ],
     },
+
     {
       icon: <FiLayout />,
       title: "UI/UX Design",
@@ -95,11 +113,11 @@ const Services = () => {
   ];
 
   return (
-    <div className='services-page'>
-      <section className='services-hero'>
-        <div className='container'>
+    <div className="services-page">
+      <section className="services-hero">
+        <div className="container">
           <motion.h1
-            className='page-title'
+            className="page-title"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -107,7 +125,7 @@ const Services = () => {
             What I Do
           </motion.h1>
           <motion.p
-            className='page-subtitle'
+            className="page-subtitle"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -119,23 +137,23 @@ const Services = () => {
         </div>
       </section>
 
-      <section className='services-grid-section'>
-        <div className='container'>
-          <div className='services-grid'>
+      <section className="services-grid-section">
+        <div className="container">
+          <div className="services-grid">
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className='service-card glass-card'
+                className="service-card glass-card"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
               >
-                <div className='service-icon'>{service.icon}</div>
+                <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <ul className='service-features'>
+                <ul className="service-features">
                   {service.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}
@@ -146,16 +164,16 @@ const Services = () => {
         </div>
       </section>
 
-      <section className='tech-orbit-section'>
+      <section className="tech-orbit-section">
         <motion.div
-          className='section-title-wrapper'
+          className="section-title-wrapper"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className='section-title'>Technical Proficiency</h2>
-          <p className='section-subtitle'>
+          <h2 className="section-title">Technical Proficiency</h2>
+          <p className="section-subtitle">
             Hover over the technologies to learn more about my experience with
             each one
           </p>
@@ -163,10 +181,10 @@ const Services = () => {
         <TechOrbit />
       </section>
 
-      <section className='process-section'>
-        <div className='container'>
+      <section className="process-section">
+        <div className="container">
           <motion.h2
-            className='section-title'
+            className="section-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -175,15 +193,15 @@ const Services = () => {
             My Work Process
           </motion.h2>
 
-          <div className='process-steps'>
+          <div className="process-steps">
             <motion.div
-              className='process-step glass-card'
+              className="process-step glass-card"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className='step-number'>01</div>
+              <div className="step-number">01</div>
               <h3>Discovery</h3>
               <p>
                 I start by understanding your business, goals, and requirements
@@ -192,13 +210,13 @@ const Services = () => {
             </motion.div>
 
             <motion.div
-              className='process-step glass-card'
+              className="process-step glass-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className='step-number'>02</div>
+              <div className="step-number">02</div>
               <h3>Planning</h3>
               <p>
                 Based on the discovery phase, I create a detailed plan including
@@ -207,13 +225,13 @@ const Services = () => {
             </motion.div>
 
             <motion.div
-              className='process-step glass-card'
+              className="process-step glass-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className='step-number'>03</div>
+              <div className="step-number">03</div>
               <h3>Design</h3>
               <p>
                 I design the user interface and experience, focusing on
@@ -222,13 +240,13 @@ const Services = () => {
             </motion.div>
 
             <motion.div
-              className='process-step glass-card'
+              className="process-step glass-card"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className='step-number'>04</div>
+              <div className="step-number">04</div>
               <h3>Development</h3>
               <p>
                 I build the solution using modern technologies and best
@@ -237,13 +255,13 @@ const Services = () => {
             </motion.div>
 
             <motion.div
-              className='process-step glass-card'
+              className="process-step glass-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className='step-number'>05</div>
+              <div className="step-number">05</div>
               <h3>Testing</h3>
               <p>
                 I thoroughly test the solution to ensure it works flawlessly
@@ -252,13 +270,13 @@ const Services = () => {
             </motion.div>
 
             <motion.div
-              className='process-step glass-card'
+              className="process-step glass-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <div className='step-number'>06</div>
+              <div className="step-number">06</div>
               <h3>Deployment</h3>
               <p>
                 I deploy the solution to your preferred hosting platform and
@@ -268,10 +286,10 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className='cta-section'>
-        <div className='container'>
+      <section className="cta-section">
+        <div className="container">
           <motion.div
-            className='cta-content glass-card'
+            className="cta-content glass-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -284,8 +302,8 @@ const Services = () => {
               consultation.
             </p>
             <motion.a
-              href='/contact'
-              className='btn btn-primary'
+              href="/contact"
+              className="btn btn-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

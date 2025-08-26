@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiCode, FiServer, FiDatabase, FiGitBranch } from "react-icons/fi";
+import { FiCode, FiServer, FiDatabase, FiGitBranch ,FiCheckCircle} from "react-icons/fi";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import SkillCard from "../../components/SkillCard/SkillCard";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
@@ -21,18 +21,20 @@ const Home = () => {
       description:
         "Creating robust server-side applications with Express.js, Node.js, and MongoDB for scalable solutions.",
     },
+       {
+  icon: <FiCheckCircle />,
+  title: "QA Automation & Testing",
+  description:
+    "Delivering high-quality software through automated testing, continuous validation, and agile QA practices.",
+},
     {
       icon: <FiDatabase />,
       title: "Database Architecture",
       description:
         "Designing efficient database schemas and implementing optimized queries for high-performance applications.",
     },
-    {
-      icon: <FiGitBranch />,
-      title: "CI/CD & DevOps",
-      description:
-        "Implementing continuous integration and deployment pipelines for efficient software delivery.",
-    },
+
+
   ];
 
   const featuredProjects = projects.slice(0, 3);

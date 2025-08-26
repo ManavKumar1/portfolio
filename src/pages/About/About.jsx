@@ -28,11 +28,11 @@ const About = () => {
     }
   };
   return (
-    <div className='about-page'>
-      <section className='about-hero'>
-        <div className='container'>
+    <div className="about-page">
+      <section className="about-hero">
+        <div className="container">
           <motion.h1
-            className='page-title'
+            className="page-title"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -40,21 +40,21 @@ const About = () => {
             About Me
           </motion.h1>
 
-          <div className='about-content'>
+          <div className="about-content">
             <motion.div
-              className='about-image'
+              className="about-image"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <img
                 src={aboutimg || "/placeholder.svg"}
-                alt='Manav - Full Stack Software Engineer'
+                alt="Manav - Full Stack Software Engineer"
               />
             </motion.div>
 
             <motion.div
-              className='about-text'
+              className="about-text"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -85,10 +85,10 @@ const About = () => {
                 impact.
               </p>
 
-              <div className='about-links'>
+              <div className="about-links">
                 <motion.a
                   href={resume}
-                  className='btn btn-primary'
+                  className="btn btn-primary"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   download
@@ -96,13 +96,13 @@ const About = () => {
                   Download Resume <FiDownload />
                 </motion.a>
 
-                <div className='social-links'>
+                <div className="social-links">
                   {socialLinks.map((link, index) => (
                     <motion.a
                       key={index}
                       href={link.url}
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ y: -5 }}
                       whileTap={{ scale: 0.9 }}
                       aria-label={link.label}
@@ -117,10 +117,10 @@ const About = () => {
         </div>
       </section>
 
-      <section className='experience-section'>
-        <div className='container'>
+      <section className="experience-section">
+        <div className="container">
           <motion.h2
-            className='section-title'
+            className="section-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -129,22 +129,22 @@ const About = () => {
             Professional Experience
           </motion.h2>
 
-          <div className='timeline'>
+          <div className="timeline">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                className='timeline-item'
+                className="timeline-item"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className='timeline-dot'></div>
-                <div className='timeline-content glass-card'>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content glass-card">
                   <h3>{exp.position}</h3>
-                  <div className='timeline-meta'>
-                    <span className='company'>{exp.company}</span>
-                    <span className='period'>{exp.period}</span>
+                  <div className="timeline-meta">
+                    <span className="company">{exp.company}</span>
+                    <span className="period">{exp.period}</span>
                   </div>
                   <p>{exp.description}</p>
                 </div>
@@ -154,10 +154,10 @@ const About = () => {
         </div>
       </section>
 
-      <section className='education-section'>
-        <div className='container'>
+      <section className="education-section">
+        <div className="container">
           <motion.h2
-            className='section-title'
+            className="section-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -166,22 +166,22 @@ const About = () => {
             Education
           </motion.h2>
 
-          <div className='timeline'>
+          <div className="timeline">
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                className='timeline-item'
+                className="timeline-item"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className='timeline-dot'></div>
-                <div className='timeline-content glass-card'>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content glass-card">
                   <h3>{edu.degree}</h3>
-                  <div className='timeline-meta'>
-                    <span className='company'>{edu.institution}</span>
-                    <span className='period'>{edu.period}</span>
+                  <div className="timeline-meta">
+                    <span className="company">{edu.institution}</span>
+                    <span className="period">{edu.period}</span>
                   </div>
                   <p>{edu.description}</p>
                 </div>
@@ -191,10 +191,10 @@ const About = () => {
         </div>
       </section>
 
-      <section className='skills-section'>
-        <div className='container'>
+      <section className="skills-section">
+        <div className="container">
           <motion.h2
-            className='section-title'
+            className="section-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -203,16 +203,16 @@ const About = () => {
             Technical Skills
           </motion.h2>
 
-          <div className='skills-container'>
+          <div className="skills-container">
             <motion.div
-              className='skills-category glass-card'
+              className="skills-category glass-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
               <h3>Frontend</h3>
-              <div className='skills-list'>
+              <div className="skills-list">
                 <span>React.js</span>
                 <span>Redux</span>
                 <span>JavaScript (ES6+)</span>
@@ -225,14 +225,14 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              className='skills-category glass-card'
+              className="skills-category glass-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <h3>Backend</h3>
-              <div className='skills-list'>
+              <div className="skills-list">
                 <span>Node.js</span>
                 <span>Express.js</span>
                 <span>MongoDB</span>
@@ -245,14 +245,14 @@ const About = () => {
             </motion.div>
 
             <motion.div
-              className='skills-category glass-card'
+              className="skills-category glass-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h3>DevOps & Tools</h3>
-              <div className='skills-list'>
+              <div className="skills-list">
                 <span>Git/GitHub</span>
                 <span>AWS</span>
                 <span>Docker</span>
@@ -261,6 +261,26 @@ const About = () => {
                 <span>Webpack</span>
                 <span>Agile/Scrum</span>
                 <span>JIRA</span>
+              </div>
+            </motion.div>
+            {/* QA Skills */}
+            <motion.div
+              className="skills-category glass-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h3>Automation Testing & QA Skills</h3>
+              <div className="skills-list">
+                <span>Java</span>
+                <span>Selenium</span>
+                <span>Postman</span>
+                <span>TestNG</span>
+                <span>JUnit</span>
+                <span>REST Assured</span>
+                <span>JIRA</span>
+                <span>Agile/Scrum</span>
               </div>
             </motion.div>
           </div>
