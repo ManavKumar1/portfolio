@@ -9,6 +9,7 @@ import {
   education,
   socialLinks,
   resume,
+  qaResume,
 } from "../../data/AboutData";
 
 const About = () => {
@@ -86,7 +87,7 @@ const About = () => {
               </p>
 
               <div className="about-links">
-                <motion.a
+                {/* <motion.a
                   href={resume}
                   className="btn btn-primary"
                   whileHover={{ scale: 1.05 }}
@@ -94,6 +95,25 @@ const About = () => {
                   download
                 >
                   Download Resume <FiDownload />
+                </motion.a> */}
+                <motion.a
+                  href={resume}
+                  className="btn btn-primary"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  download
+                >
+                  SDE Resume <FiDownload />
+                </motion.a>
+                <motion.a
+                  href={qaResume}
+                  className="btn btn-primary"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  download
+                >
+                  QA Resume
+                  <FiDownload />
                 </motion.a>
 
                 <div className="social-links">
@@ -243,26 +263,6 @@ const About = () => {
                 <span>SQL</span>
               </div>
             </motion.div>
-
-            <motion.div
-              className="skills-category glass-card"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h3>DevOps & Tools</h3>
-              <div className="skills-list">
-                <span>Git/GitHub</span>
-                <span>AWS</span>
-                <span>Docker</span>
-                <span>CI/CD</span>
-                <span>Jest</span>
-                <span>Webpack</span>
-                <span>Agile/Scrum</span>
-                <span>JIRA</span>
-              </div>
-            </motion.div>
             {/* QA Skills */}
             <motion.div
               className="skills-category glass-card"
@@ -281,6 +281,25 @@ const About = () => {
                 <span>REST Assured</span>
                 <span>JIRA</span>
                 <span>Agile/Scrum</span>
+              </div>
+            </motion.div>
+            <motion.div
+              className="skills-category glass-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h3>DevOps & Tools</h3>
+              <div className="skills-list">
+                <span>Git/GitHub</span>
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>CI/CD</span>
+                <span>Jest</span>
+                <span>Webpack</span>
+                <span>Agile/Scrum</span>
+                <span>JIRA</span>
               </div>
             </motion.div>
           </div>

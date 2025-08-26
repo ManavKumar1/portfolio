@@ -59,14 +59,14 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2.5rem;
+      gap: 2rem;
       
       @media (max-width: 576px) {
         grid-template-columns: 1fr;
       }
       
       .service-card {
-        padding: 2.5rem;
+        padding: 2rem;
         height: 100%;
         
         .service-icon {

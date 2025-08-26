@@ -41,7 +41,7 @@
     max-width: 600px;
 
     h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-size: clamp(3.5rem, 5vw, 3.5rem);
       line-height: 1.2;
       margin-bottom: 1.5rem;
       display: flex;
@@ -55,6 +55,7 @@
 
       .title {
         color: var(--text-primary);
+        font-size: 2rem;
       }
     }
 
@@ -102,7 +103,7 @@
 
   .hero-image {
     flex: 1;
-    max-width: 500px;
+    max-width: 450px;
     position: relative;
 
     img {
