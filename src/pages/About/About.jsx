@@ -61,7 +61,8 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <h2>Manav</h2>
-              <h3>Full-Stack Software Engineer</h3>
+              {/* <h3>Full-Stack Software Engineer</h3> */}
+              <h3>Full-Stack Developer & QA Automation Engineer</h3>
 
               <p>
                 I'm a dedicated Software Engineer with expertise in building
