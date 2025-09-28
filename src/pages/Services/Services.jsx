@@ -11,7 +11,7 @@ import {
 } from "react-icons/fi";
 import "./Services.scss";
 
-import TechOrbit from "../../components/TechOrbit/TechOrbit";
+// import TechOrbit from "../../components/TechOrbit/TechOrbit";
 
 const Services = () => {
   const services = [
@@ -178,7 +178,7 @@ const Services = () => {
             each one
           </p>
         </motion.div>
-        <TechOrbit />
+        {/* <TechOrbit /> */}
       </section>
 
       <section className="process-section">
