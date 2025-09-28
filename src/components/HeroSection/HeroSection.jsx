@@ -1,9 +1,12 @@
 "use client";
-
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FiDownload } from "react-icons/fi";
 import "./HeroSection.scss";
-import heroimg from "../../assets/img1.jpg";
+
+import heroimg1 from "../../assets/ProfilePhoto/img1.jpg";
+import heroimg2 from "../../assets/ProfilePhoto/img3.jpg";
+
 import react from "../../assets/react.svg";
 import express from "../../assets/Express.svg";
 import mongodb from "../../assets/MongoDB.svg";
@@ -23,11 +26,11 @@ import git from "../../assets/GitHub.svg";
 import mysql from "../../assets/MySQL.svg";
 import tailwind from "../../assets/Tailwind.svg";
 import graphql from "../../assets/GraphQL.svg";
-
 import selenium from "../../assets/Selenium.svg";
 import maven from "../../assets/Apache Maven.svg";
 import java from "../../assets/Java.svg";
 import jenkins from "../../assets/Jenkins.svg";
+
 import resume from "../../assets/Resumes/Manav_SDE_RESUME.pdf";
 import qaResume from "../../assets/Resumes/Manav_Resume_QA.pdf";
 
@@ -59,9 +62,21 @@ const techItems = [
 ];
 
 const HeroSection = () => {
+  const heroImages = [heroimg1, heroimg2]; // carousel images
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 10000); // change every 10 seconds
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <section className="hero-section">
       <div className="hero-content">
+        {/* Hero Text */}
         <motion.div
           className="hero-text"
           initial={{ opacity: 0, y: 20 }}
@@ -81,6 +96,8 @@ const HeroSection = () => {
             that drive business growth, enhance user experience, and guarantee
             software quality.
           </p>
+
+          {/* Buttons */}
           <div className="hero-buttons">
             <motion.a
               href={resume}
@@ -98,7 +115,7 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
               download
             >
-              QA Resume<FiDownload />
+              QA Resume <FiDownload />
             </motion.a>
             <motion.a
               href="/projects"
@@ -111,6 +128,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
+        {/* Hero Image with carousel */}
         <motion.div
           className="hero-image"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -122,13 +140,22 @@ const HeroSection = () => {
             <div className="blob"></div>
             <div className="blob"></div>
           </div>
-          <img
-            src={heroimg || "/placeholder.svg"}
-            alt="Manav - Full Stack Software Engineer"
-          />
+
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentImage}
+              src={heroImages[currentImage]}
+              alt="Manav - Full Stack Software Engineer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+            />
+          </AnimatePresence>
         </motion.div>
       </div>
 
+      {/* Tech Stack */}
       <div className="tech-stack">
         <motion.div
           className="tech-stack-content"
@@ -152,10 +179,7 @@ const TechMarquee = ({ items }) => {
       <div className="marquee-track">
         {[...items, ...items].map((tech, idx) => (
           <div className="tech-icon" key={idx}>
-            <img
-              src={tech.icon || "/placeholder.svg"}
-              alt={`${tech.label} Logo`}
-            />
+            <img src={tech.icon || "/placeholder.svg"} alt={`${tech.label} Logo`} />
             <span>{tech.label}</span>
           </div>
         ))}

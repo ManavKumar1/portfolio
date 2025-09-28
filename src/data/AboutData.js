@@ -64,7 +64,7 @@ const socialLinks = [
 ];
 
 const resume = "../../../assets/Resumes/Manav_SDE_RESUME.pdf";
-const aboutimg = "../../assets/img2.jpg";
+const aboutimg = "../../assets/ProfilePhoto/img2.jpg";
 const qaResume = "../../assets/Resumes/Manav_Resume_QA.pdf";
 
 export { experiences, education, socialLinks, resume, aboutimg, qaResume };

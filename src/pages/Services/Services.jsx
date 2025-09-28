@@ -164,7 +164,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="tech-orbit-section">
+      {/* <section className="tech-orbit-section">
         <motion.div
           className="section-title-wrapper"
           initial={{ opacity: 0, y: 20 }}
@@ -178,8 +178,8 @@ const Services = () => {
             each one
           </p>
         </motion.div>
-        {/* <TechOrbit /> */}
-      </section>
+        <TechOrbit />
+      </section> */}
 
       <section className="process-section">
         <div className="container">

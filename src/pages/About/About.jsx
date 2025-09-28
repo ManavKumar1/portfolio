@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { FiDownload, FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 import "./About.scss";
-import aboutimg from "../../assets/img2.jpg";
+import aboutimg from "../../assets/ProfilePhoto/img2.jpg";
 import {
   experiences,
   education,
