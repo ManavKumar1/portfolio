@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: <FiPhone />,
       title: "Phone",
-      details: "+91 7014667988",
+      details: "+91 9983323355",
     },
   ];
 

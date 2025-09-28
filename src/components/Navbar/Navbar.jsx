@@ -33,6 +33,8 @@ const Navbar = ({ theme, toggleTheme }) => {
     { path: "/projects", label: "Projects" },
     { path: "/expertise", label: "Skills & Expertise" },
     { path: "/contact", label: "Contact" },
+    { path: "/sde", label: "SDE Role" },
+    { path: "/qa", label: "QA Role" },
   ];
 
   return (

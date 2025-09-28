@@ -28,8 +28,8 @@ import selenium from "../../assets/Selenium.svg";
 import maven from "../../assets/Apache Maven.svg";
 import java from "../../assets/Java.svg";
 import jenkins from "../../assets/Jenkins.svg";
-import resume from "../../assets/Manav_Kumar_RESUME.pdf";
-import qaResume from "../../assets/Manav_Resume_QA.pdf";
+import resume from "../../assets/Resumes/Manav_Kumar_RESUME.pdf";
+import qaResume from "../../assets/Resumes/Manav_Resume_QA.pdf";
 
 const techItems = [
   { icon: react, label: "React.js" },
