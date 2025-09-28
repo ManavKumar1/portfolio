@@ -11,7 +11,7 @@ import Projects from "./pages/Projects/Projects";
 import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import ScrollToTop from './utils/ScrollToTop'
-import SDE from "./pages/Roles/SDE/SDE"
+import SDE from "./pages/Roles/SDE/SDE.jsx"
 import QA from "./pages/Roles/QA/QA"
 import "./App.scss";
 
