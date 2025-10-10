@@ -97,7 +97,7 @@ const QA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <motion.button
+            {/* <motion.button
               className="action-card primary-action"
               onClick={handleDownloadResume}
               whileHover={{ y: -5 }}
@@ -109,7 +109,7 @@ const QA = () => {
                 Get my detailed QA resume with testing experience and
                 certifications
               </p>
-            </motion.button>
+            </motion.button> */}
 
             <motion.a
               href="/projects"

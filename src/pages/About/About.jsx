@@ -106,7 +106,7 @@ const About = () => {
                 >
                   SDE Resume <FiDownload />
                 </motion.a>
-                <motion.a
+                {/* <motion.a
                   href={qaResume}
                   className="btn btn-primary"
                   whileHover={{ scale: 1.05 }}
@@ -115,7 +115,7 @@ const About = () => {
                 >
                   QA Resume
                   <FiDownload />
-                </motion.a>
+                </motion.a> */}
 
                 <div className="social-links">
                   {socialLinks.map((link, index) => (

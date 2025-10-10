@@ -62,16 +62,6 @@ const techItems = [
 ];
 
 const HeroSection = () => {
-  const heroImages = [heroimg1, heroimg2]; // carousel images
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 10000); // change every 10 seconds
-
-    return () => clearInterval(interval);
-  }, [heroImages.length]);
 
   return (
     <section className="hero-section">
@@ -109,15 +99,6 @@ const HeroSection = () => {
               SDE Resume <FiDownload />
             </motion.a>
             <motion.a
-              href={qaResume}
-              className="btn btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              download
-            >
-              QA Resume <FiDownload />
-            </motion.a>
-            <motion.a
               href="/projects"
               className="btn btn-outline"
               whileHover={{ scale: 1.05 }}
@@ -143,8 +124,7 @@ const HeroSection = () => {
 
           <AnimatePresence mode="wait">
             <motion.img
-              key={currentImage}
-              src={heroImages[currentImage]}
+              src={heroimg2}
               alt="Manav - Full Stack Software Engineer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
