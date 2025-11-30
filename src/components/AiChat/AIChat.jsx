@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { AiOutlineClose, AiOutlineSend } from "react-icons/ai"
 import { BiMessageRounded } from "react-icons/bi"
 import "./AIChat.scss"
-import generateResponse from "../../utils/generateResponse"
+import generateResponse from "../../utils/GenerateResponse"
 
 // Sparkle animation
 function SparkleParticle({ sparkle }) {
