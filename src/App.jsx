@@ -13,7 +13,7 @@ import Contact from "./pages/Contact/Contact"
 import ScrollToTop from "./utils/ScrollToTop"
 import SDE from "./pages/Roles/SDE/SDE"
 import QA from "./pages/Roles/QA/QA"
-import AIChat from "./components/AIChat/AIChat"
+import AIChat from "./components/AiChat/AIChat"
 import "./App.scss"
 
 function App() {
